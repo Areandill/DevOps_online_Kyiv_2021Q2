@@ -1,0 +1,15 @@
+baffeb8 HEAD@{0}: merge develop: Fast-forward
+2a54bc7 HEAD@{1}: checkout: moving from develop to main
+baffeb8 HEAD@{2}: commit (merge): Merge branches 'images' and 'styles' into develop, resolved merge conflict.
+8bc9654 HEAD@{3}: merge images: Fast-forward
+1340030 HEAD@{4}: checkout: moving from styles to develop
+8293abb HEAD@{5}: commit: Add path to styles.css file in index.html
+5f062c3 HEAD@{6}: commit: Created new branch "styles", created new folder and file styles.css in it.
+1340030 HEAD@{7}: checkout: moving from develop to styles
+1340030 HEAD@{8}: checkout: moving from images to develop
+8bc9654 HEAD@{9}: commit: Add links to folder with images files into index.html
+8a8f5a5 HEAD@{10}: commit: Created new branch "images", then created new folder "images" and put few images in it.
+1340030 HEAD@{11}: checkout: moving from develop to images
+1340030 HEAD@{12}: commit: Created new branch "develop", switched on it and create file "index.html".
+2a54bc7 HEAD@{13}: checkout: moving from main to develop
+2a54bc7 HEAD@{14}: clone: from git@github.com:Areandill/DevOps_online_Kyiv_2021Q2.git
