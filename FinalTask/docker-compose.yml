@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+  jmaster:
+    build:
+      context: ./
+      dockerfile: Dockerfile1
+    container_name: jmaster
+    ports:
+      - "8081:8080"
+      - "50002:50000"
+    volumes:
+      - jenkins:/var/jenkins_home
+    networks:
+      - jenkins
+  jslave:
+    build:
+      context: ./
+      dockerfile: Dockerfile2
+    container_name: jslave
+    ports:
+      - "8082:8080"
+      - "50003:50000"
+    environment:
+      - JENKINS_URL=http://jmaster:8080
+      - JENKINS_SECRET=ef445757b52bbc753fb434fd1fdb08935a5aa32b21eb7d2e480efb4b1c46766d
+      - JENKINS_AGENT_NAME=jslave
+      - JENKINS_AGENT_WORKDIR=/home/jenkins/agent
+    networks:
+      - jenkins
+
+networks:
+  jenkins:
+volumes:
+  jenkins:
